@@ -1,6 +1,7 @@
 메모장 만들기  
 
 디자인  
+https://github.com/yejify/MEMO/blob/023b589cef7dbadecdc93d2ad11092abc043aa50/memo_figma.png
 
 기능  
 - 메모 저장  
