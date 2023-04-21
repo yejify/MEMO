@@ -1,0 +1,27 @@
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+input {
+    display: block;
+    width: 300px;
+    height: 30px;
+    margin-bottom: 10px;
+}
+
+textarea {
+    display: block;
+    width: 300px;
+    height: 300px;
+    margin-bottom: 10px;
+    resize: none;
+}
+
+button {
+    display: block;
+    width: 306px;
+    height: 30px;
+}
