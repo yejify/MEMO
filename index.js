@@ -22,8 +22,8 @@ function saveNote() {
     render();
 
     //texterea clear
-    title.value = " ";
-    content.value = " ";
+    title.value = "";
+    content.value = "";
 }
 
 function render() {
