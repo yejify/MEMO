@@ -16,7 +16,10 @@ function saveNote() {
     const day = ('0' + date.getDate()).slice(-2);
     const dateStr = year + '-' + month + '-' + day;
 
-    allMemo.push({title: title.value, content: content.value, len: allMemo.length, date: dateStr});
+    //랜덤컬러 생성
+    const randomColor = parseInt(Math.random()*4) + 1;
+
+    allMemo.push({title: title.value, content: content.value, len: allMemo.length, date: dateStr, color: randomColor});
 
     localStorage.setItem("allMemo", JSON.stringify(allMemo));
     render();
@@ -30,11 +33,6 @@ function render() {
     const display = document.getElementById("display");
     display.innerHTML = "";
 
-    // // 최신 게시물이 위로 올라오도록
-    // for (let i = allMemo.length; i > 0 ; i--) {
-    //     // 아래와 유사 코드
-    // }
-
     for (const item of allMemo) {
         const saveTitle = document.createElement("h2");
         const saveContent = document.createElement("p");
@@ -42,6 +40,7 @@ function render() {
         const deleteMemoBtn = document.createElement("button");
         const itemBox = document.createElement("div");
         const saveDay = document.createElement("p");
+        const colorClass = item.color;
 
         saveTitle.textContent = item.title;
         saveTitle.setAttribute("class", "saveTitle");
@@ -53,11 +52,9 @@ function render() {
         deleteMemoBtn.setAttribute("id", item.len);
         deleteMemoBtn.setAttribute("class", "removeBtn");
         deleteMemoBtn.setAttribute("onclick", "remove()");
-        itemBox.textContent = " ";
-        itemBox.setAttribute("class", "memoItemBox");
+        itemBox.classList.add("memoItemBox", colorClass)
         saveDay.textContent = item.date;
         saveDay.setAttribute("class", "saveDay");
-
         display.appendChild(itemBox);
         itemBox.appendChild(saveId);
         itemBox.appendChild(saveTitle);
