@@ -48,3 +48,19 @@ input:focus, textarea:focus {
     box-shadow: 2px 2px 2px 0px #00000040;
     border-radius: 5px;
 }
+
+.red{
+    background-color: #FFE4E4;
+}
+
+.orange{
+    background-color: #FFEDDD;
+}
+
+.green{
+    background-color: #E8FBE0;
+}
+
+.blue{
+    background-color: #EAF0FF;
+}

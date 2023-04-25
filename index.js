@@ -40,8 +40,24 @@ function render() {
         const deleteMemoBtn = document.createElement("button");
         const itemBox = document.createElement("div");
         const saveDay = document.createElement("p");
-        const colorClass = item.color;
 
+        const color = item.color;
+        let colorClass;
+        switch(color){
+            case 1:
+            colorClass = 'red';
+            break;
+            case 2:
+            colorClass = 'orange';
+            break;
+            case 3:
+            colorClass = 'green';
+            break;
+            case 4:
+            colorClass = 'blue';
+            break;
+        };
+        
         saveTitle.textContent = item.title;
         saveTitle.setAttribute("class", "saveTitle");
         saveContent.textContent = item.content;
