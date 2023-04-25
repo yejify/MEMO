@@ -44,13 +44,19 @@ function render() {
         const saveDay = document.createElement("p");
 
         saveTitle.textContent = item.title;
+        saveTitle.setAttribute("class", "saveTitle");
         saveContent.textContent = item.content;
+        saveContent.setAttribute("class", "saveContent");
         saveId.textContent = item.len + 1;
+        saveId.setAttribute("class", "length");
         deleteMemoBtn.textContent = "삭제";
         deleteMemoBtn.setAttribute("id", item.len);
+        deleteMemoBtn.setAttribute("class", "removeBtn");
         deleteMemoBtn.setAttribute("onclick", "remove()");
         itemBox.textContent = " ";
+        itemBox.setAttribute("class", "memoItemBox");
         saveDay.textContent = item.date;
+        saveDay.setAttribute("class", "saveDay");
 
         display.appendChild(itemBox);
         itemBox.appendChild(saveId);
