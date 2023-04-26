@@ -11,6 +11,7 @@ main {
     border-radius: 20px;
     overflow: hidden;
     position: relative;
+    margin: 20px;
 }
 
 input {
@@ -49,6 +50,67 @@ input:focus, textarea:focus {
     border-radius: 5px;
 }
 
+#display{
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin: 20px;
+    justify-content: center;
+}
+
+.memoItemBox{
+    width: 300px;
+    border-radius: 20px;
+    padding: 10px;
+    box-sizing: border-box;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 3px 3px 3px 0px #00000040;
+}
+
+.length{
+    display: none;
+}
+
+.saveTitle{
+    font-size: 20px;
+    font-weight: bold;
+    padding: 20px 10px 10px 20px;
+    margin: 0;
+    width: 320px;
+    position: absolute;
+    top: -5px;
+    left: -5px;
+}
+
+.saveContent{
+    margin: 50px 5px 50px 5px;
+    font-size: 14px;
+}
+
+.removeBtn{
+    border: none;
+    background-color: transparent;
+    position: absolute;
+    right: 10px;
+    top: 16px;
+    cursor: pointer;
+}
+
+.removeBtn:hover{
+    color: red;
+}
+
+.saveDay{
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    margin: 0;
+    padding: 10px 5px 0 0;
+    font-size: 12px;
+    color: #939393;
+}
+
 .red{
     background-color: #FFE4E4;
 }
@@ -63,4 +125,20 @@ input:focus, textarea:focus {
 
 .blue{
     background-color: #EAF0FF;
+}
+
+.red h2{
+    background-color: #FFBFBF;
+}
+
+.orange h2{
+    background-color: #FFD8B4;
+}
+
+.green h2{
+    background-color: #D4F6C4;
+}
+
+.blue h2{
+    background-color: #C9D7FB;
 }
